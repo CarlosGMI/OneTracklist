@@ -1,5 +1,16 @@
-<ion-view view-title="Playlist">
+<ion-view view-title="{{tracklist.NombreDj}} - {{tracklist.NombreEvto}}">
   <ion-content>
-    <h1>Playlist</h1>
+    <ion-list>
+        <div ng-repeat="cancion in canciones">
+          <ion-item class="item-stable" ng-click="toggleGroup(cancion)" ng-class="{active: isGroupShown(cancion)}">
+            <i class="icon" ng-class="isGroupShown(cancion) ? 'ion-minus' : 'ion-plus'"></i>
+            &nbsp;
+            {{cancion.nombre}} - {{cancion.artista}} [{{cancion.sello}}]
+          </ion-item>
+          <ion-item class="item-accordion" ng-repeat="item in cancion.items" ng-show="isGroupShown(cancion)">
+            {{item}}
+          </ion-item>
+        </div>
+      </ion-list>
   </ion-content>
 </ion-view>

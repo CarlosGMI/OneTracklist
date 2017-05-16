@@ -7,17 +7,6 @@
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-    <script>
-        var config = 
-        {
-            apiKey: "AIzaSyC5OT80Sjrc2XD66iNKFTHDJmLaSAXkAl0",
-            authDomain: "monaca-cli-trial.firebaseapp.com",
-            databaseURL: "https://monaca-cli-trial.firebaseio.com/",
-            storageBucket: "onetracklist.appspot.com",
-        };
-        firebase.initializeApp(config);
-        var rootRef = firebase.database().ref();
-    </script>
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
@@ -26,6 +15,7 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
     <!-- your app's js -->
+    <script src="js/firebase.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
   </head>
